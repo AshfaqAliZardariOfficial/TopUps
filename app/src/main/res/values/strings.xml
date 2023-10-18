@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TopUps</string>
+    <string name="get_price">Get Price</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="price">Price: %1$s</string>
+
+    <string name="facebook_app_id">2002813650117721</string>
+    <string name="fb_login_protocol_scheme">fb2002813650117721</string>
+    <string name="facebook_client_token">277e677f213cd62aa0512731d99c5b08</string>
+
+
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">2002813650117721</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb2002813650117721</string>
+    <string name="login" >Login with Google</string>
+
+</resources>
