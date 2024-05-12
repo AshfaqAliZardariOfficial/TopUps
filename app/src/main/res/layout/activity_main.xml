@@ -5,6 +5,29 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instruction"
+        android:padding="10pt"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="2pt"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lblConfirm"
+        android:padding="10pt"
+        android:layout_margin="4pt"
+        android:id="@+id/btnConfirmOrder"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="2pt" />
+
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"

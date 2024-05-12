@@ -6,7 +6,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -40,16 +42,18 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
     // To get key go to Developer Console > Select your app > Development Tools > Services & APIs.
     //for new play console
     //To get key go to Developer Console > Select your app > Monetize > Monetization setup
-    static String base64Key = "asdffvvrasdffvvrasdffvvrasdffvvrasdffvvrasdffvvrasdffvvrasdffvvr";
+    static String base64Key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm0AX7QFU9qREDPMW7qPsvmLgE73AwmjXC85JvS2wzUhE4NcAzoGzhJ7C8SD2HPa4ILss5xTqb7ZnAZQnjULKnCDpUBxVgmV3PlpmqtiEAjqmkDnbZV39BEMdBDN7VMFDNLLtM84znJooJL+et1DaO1jDy4asL6xPP+UMnAq0113jJrc6IP7nYfRxbKsZBzv6N2beK3yya/1j3+5GqGhn8jbF1SYRa8UpRip01A+2JpuMV1eKN2nxg0UU437TgboAS5stkmuvcQyU6HLT+J7TdIXTkobDzJPNZkeabXZfCgREGUYnQiDXGL3dKLeKEhaGZrhwzvGJorvv2XKCsZpDhQIDAQAB";
 
     //note add unique product ids
     //use same id for preference key
     private static ArrayList<String> purchaseItemIDs = new ArrayList<String>() {{
-        add("usd001");
-        add("1usd");
-//        add("p3");
+        add("topups_280_1usd_13052024");
+        add("topups_560_2usd_13052024");
+        add("topups_840_3usd_13052024");
+        add("topups_1120_4usd_13052024");
+        add("topups_1400_5usd_13052024");
     }};
-
+    private String link = "https://forms.gle/xeew6aFmS6YW2zir8";
     private static ArrayList<String> purchaseItemDisplay = new ArrayList<String>();
     ArrayAdapter<String> arrayAdapter;
 
@@ -62,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
         main = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(main.getRoot());
 
+        main.btnConfirmOrder.setOnClickListener(view -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            startActivity(browserIntent);
+        });
 
         // Establish connection to billing client
         //check purchase status from google play store cache on every app start
@@ -180,7 +188,25 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
     private void notifyList() {
         purchaseItemDisplay.clear();
         for (String p : purchaseItemIDs) {
-            purchaseItemDisplay.add("Purchase Status of " + p + " = " + getPurchaseItemValueFromPref(p));
+
+            switch (p) {
+                case "topups_280_1usd_13052024":
+                    purchaseItemDisplay.add("Order " + "PK Bank Digital Card - 220");
+                    break;
+                case "topups_560_2usd_13052024":
+                    purchaseItemDisplay.add("Order " + "PK Bank Digital Card - 440");
+                    break;
+                case "topups_840_3usd_13052024":
+                    purchaseItemDisplay.add("Order " + "PK Bank Digital Card - 660");
+                    break;
+                case "topups_1120_4usd_13052024":
+                    purchaseItemDisplay.add("Order " + "PK Bank Digital Card - 880");
+                    break;
+                case "topups_1400_5usd_13052024":
+                    purchaseItemDisplay.add("Order " + "PK Bank Digital Card - 1100");
+                    break;
+            }
+
         }
         arrayAdapter.notifyDataSetChanged();
     }

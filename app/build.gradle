@@ -5,16 +5,17 @@ plugins {
 
 android {
     namespace 'com.ashfaqalizardaristore.topupsapp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.ashfaqalizardaristore.topupsapp"
         minSdk 24
-        targetSdk 33
-        versionCode 3
-        versionName '3.0'
+        targetSdk 34
+        versionCode 5
+        versionName '5.0'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionNameSuffix 'AAZStore'
     }
 
     buildTypes {

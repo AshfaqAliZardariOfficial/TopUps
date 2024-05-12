@@ -13,5 +13,7 @@
     <string name="facebook_application_id" translatable="false">2002813650117721</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb2002813650117721</string>
     <string name="login" >Login with Google</string>
+    <string name="instruction">Fill out the form by clicking below "Confirm Order" button to confirm the order, after receiving the order email.</string>
+    <string name="lblConfirm">Confirm Order</string>
 
 </resources>
