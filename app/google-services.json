@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "941511864579",
+    "firebase_url": "https://topups-fc8ab-default-rtdb.firebaseio.com",
+    "project_id": "topups-fc8ab",
+    "storage_bucket": "topups-fc8ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941511864579:android:9a96a15152900386e7b936",
+        "android_client_info": {
+          "package_name": "com.ashfaqalizardaristore.topupsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941511864579-513to8q34lsr9krn2u2nsu5tmfvtrss9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashfaqalizardaristore.topupsapp",
+            "certificate_hash": "e1c9abcc971f2546575c025bdb72f4a0b3c895b3"
+          }
+        },
+        {
+          "client_id": "941511864579-0lao5peeoldfvchvlp2o2m12q3l5578v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhEnU92s5O77W1pZDyS3oGSvaHae6naMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941511864579-0lao5peeoldfvchvlp2o2m12q3l5578v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
